@@ -1,22 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
-    <title>Profil Jamie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Jamie | Super Team</title>
+    <link rel="stylesheet" href="jamie.css">
 </head>
 
 <body>
-    <h1>Jamie Andian Leonardi</h1>
-    <img src="jamies.jpg" alt="Foto terbaik abad ini">
-    <p><strong>Hobi</strong> : Badminton, tidur, main game, jalan jalan</p>
-    <p><strong>Keahlian</strong> : Java, Bahasa inggris, pukul-pukul bantal, dll</p>
+    <canvas id="bg-canvas"></canvas>
 
-    <hr>
-    <h2>Aktivitas Terakhir</h2>
-    <h2>Aktivitas Terakhir</h2>
-    <p><em>"Mandiin anak kecil"</em></p>
-    <img src = "Messi mandiin yamal.jpg" alt="memandikan calon goat">
+    <div class="container">
+        <nav class="top-nav">
+            <a href="index.html" class="btn-home">
+                <span>&larr;</span> Kembali ke Home
+            </a>
+        </nav>
+
+        <section class="glass-card">
+            <div class="profile-header">
+                <div class="profile-img-wrapper">
+                    <img src="jamies.jpg" alt="Foto terbaik abad ini">
+                </div>
+                <div class="profile-info">
+                    <h1>Jamie Andian Leonardi</h1>
+                    <p class="subtitle">
+                        Informatics Student &bull; Sleep Enthusiast &bull; Certified Pillow Boxer
+                    </p>
+                    <div>
+                        <strong class="hobby-label">Hobi:</strong>
+                        <div class="tag-group">
+                            <span class="tag">Badminton</span>
+                            <span class="tag">Tidur</span>
+                            <span class="tag">Main Game</span>
+                            <span class="tag">Jalan-jalan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card">
+            <h2 class="section-title">Statistik Keahlian</h2>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>Java & Backend Engineering</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" data-width="85%"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>Bahasa Inggris</span>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" data-width="90%"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>Pukul-pukul Bantal (Heavyweight Class)</span>
+                    <span class="skill-percent">99%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" data-width="99%"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>Tidur Cepat Tanpa Overthinking</span>
+                    <span class="skill-percent">100%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" data-width="100%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card">
+            <h2 class="section-title">Aktivitas Terakhir</h2>
+            <div class="activity-box">
+                <p class="activity-quote">"Mandiin anak kecil"</p>
+                <img class="activity-img" src="Messi mandiin yamal.jpg" alt="memandikan calon goat">
+            </div>
+        </section>
+
+        <div class="surprise-wrapper">
+            <button class="btn-surprise" id="surprise-btn">
+                Klik untuk Kejutan Random
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="surprise-modal">
+        <div class="modal-card">
+            <span class="modal-emoji" id="modal-emoji"></span>
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-text" id="modal-text"></p>
+            <div class="modal-actions">
+                <button class="btn-modal btn-reroll" id="reroll-btn">Acak Lagi</button>
+                <button class="btn-modal btn-close" id="close-modal-btn">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dog-pet" title="Klik aku!">
+        <div class="dog-bubble" id="dog-speech">Guk! Halo, klik aku!</div>
+        <div class="dog-avatar" id="dog-avatar">🐶</div>
+    </div>
+
+    <script src="jamie.js"></script>
 </body>
 
 </html>
