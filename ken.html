@@ -1,24 +1,219 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Profil - Ken Raphael Tunggaldjaja</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Ken Raphael</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3efff;
+    color: #333;
+    margin: 0;
+    padding: 25px;
+    transition: .3s;
+}
+
+.container { max-width: 750px; margin: auto; }
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+h1, h2 { color: #7655bd; }
+h1 { margin-bottom: 8px; }
+h2 { font-size: 20px; }
+p { line-height: 1.6; }
+
+.profile { text-align: center; }
+
+.profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.activity-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+button {
+    background: #8765ce;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover { background: #6344a5; }
+
+.skill { margin: 15px 0; }
+
+.bar {
+    height: 12px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #9878df;
+    border-radius: 10px;
+}
+
+.pet {
+    font-size: 65px;
+    cursor: pointer;
+    display: inline-block;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    50% { transform: translateY(-12px); }
+}
+
+body.dark { background: #242033; color: white; }
+body.dark .card { background: #39334d; color: white; }
+body.dark h1, body.dark h2 { color: #c9afff; }
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    body { padding: 15px; }
+    .card { padding: 20px; }
+}
+</style>
 </head>
-<body>
 
-    <h1>Ken Raphael Tunggaldjaja</h1>
-    
-    <img src="meme-3jpg-fjqv.jpg" alt="Foto Keren Ken" width="300">
-    
-    <p><strong>Hobi:</strong> Nonton Film</p>
-    <p><strong>Keahlian:</strong> Java dan Jawa</p>
+<body id="halaman">
+<div class="container">
 
-    <hr>
+    <!-- PROFIL -->
+    <div class="card profile">
+        <img src="meme-3jpg-fjqv.jpg" alt="Foto Ken Raphael">
 
-    <h2>Aktivitas Terakhir</h2>
-    <p><em>"Narik penumpang dulu."</em></p>
-    
-    <img src="044077200_1570513831-terbalik_1.webp" alt="Aktivitas Terbaik" width="300">
-    
+        <h1>Ken Raphael Tunggaldjaja</h1>
+        <p>🎬 Hobby: Nonton Film</p>
+        <p>💻 Skill: Java(Pas-pasan aja)</p>
+        <p>"Hidup seperti Java, kadang error tanpa alasan."</p>
+
+        <button onclick="surprise()">🎁 Surprise Me!</button>
+        <button onclick="ubahBackground()">🌙 Change Theme</button>
+    </div>
+
+    <!-- AKTIVITAS TERAKHIR -->
+    <div class="card">
+        <h2>🚕 Aktivitas Terakhir</h2>
+        <p><i>"Narik penumpang dulu."</i></p>
+        <p>Kesibukan sehari-hari: mencari cuan sambil tetap menjalani kehidupan.</p>
+
+        <img src="044077200_1570513831-terbalik_1.webp" alt="Aktivitas Terakhir" class="activity-img">
+    </div>
+
+    <!-- SKILL -->
+    <div class="card">
+        <h2>⭐ My Skills</h2>
+
+        <div class="skill">
+            <p>Java Programming - 75%</p>
+            <div class="bar">
+                <div class="progress" style="width:75%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Bahasa Mongolia - 99%</p>
+            <div class="bar">
+                <div class="progress" style="width:99%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Namatin Series 1 Hari - 100%</p>
+            <div class="bar">
+                <div class="progress" style="width:100%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIRTUAL PET -->
+    <div class="card profile">
+        <h2>🐺 My Virtual Pet</h2>
+
+        <div class="pet" onclick="petClick()">🐺</div>
+
+        <p id="petMessage">Halo! Namaku Wolfie. Klik aku!</p>
+        <p>Jumlah klik: <span id="counter">0</span></p>
+    </div>
+
+    <footer>
+        Made with ❤️ by Ken Raphael | 2026
+    </footer>
+
+</div>
+
+<script>
+// SURPRISE BUTTON
+function surprise() {
+    var pesan = [
+        "Error 404: Kopi tidak ditemukan! ☕",
+        "AWAS! Ada penumpang nyasar! 🚕",
+        "Skill Bahasa Mongolia meningkat 99%! 😂",
+        "Jangan lupa istirahat, programmer!",
+        "Selamat! Kamu mendapatkan THR... dalam mimpi! 💸"
+    ];
+
+    var random = Math.floor(Math.random() * pesan.length);
+    alert(pesan[random]);
+}
+
+// CHANGE BACKGROUND
+function ubahBackground() {
+    document.getElementById("halaman").classList.toggle("dark");
+}
+
+// VIRTUAL PET
+var jumlahKlik = 0;
+
+function petClick() {
+    jumlahKlik++;
+    document.getElementById("counter").innerText = jumlahKlik;
+
+    var pesan = [
+        "Auuuu! Tetangga sebelah langsung lapor RT! 🐺",
+        "Elus boleh, transfer saldo juga boleh! 💸",
+        "Aku lapar... adanya tulang atau uang? 🍖",
+        "Kamu baik banget, fix bukan NPC! 😂",
+        "Jangan cuma diklik, ajak healing juga dong! 🏖️",
+        "Auuuu! Aku bukan serigala biasa, aku serigala berdasi! 🐺",
+        "Klik terus, siapa tahu aku berubah jadi anjing sultan! 👑",
+        "Aku setia kok, asal WiFi dan makanan lancar! 📶"
+    ];
+
+    var random = Math.floor(Math.random() * pesan.length);
+    document.getElementById("petMessage").innerText = pesan[random];
+}
+</script>
+
 </body>
 </html>
