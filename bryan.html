@@ -1,21 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Bryan</title>
+    <title>Profil Bryan Wilson Angelo</title>
+    <link rel="stylesheet" href="bryan.css">
 </head>
-<body>
-    <p>Nama: Bryan Wilson Angelo</p>
-    <p>Foto Diri</p>
-    <img src="kucing.jpg" alt="Foto Diri">
-    <p>Hobi: Olahraga angkat beban</p>
-    <p>Keahlian: Bahasa (Inggris, Indonesia, Jepang)</p>
 
-    <br>
+<body id="halaman">
+<div class="container">
 
-    <h3>Akvitas Terakhir:</h3>
-    <p>Gym, Fitness</p>
-    <img src="woman-helping-man-gym-scaled.jpg" alt="aktivitas">
+    <!-- PROFIL -->
+    <div class="card profile">
+        <img src="kucing.jpg" alt="Foto Bryan Wilson Angelo">
+
+        <h1>Bryan Wilson Angelo</h1>
+        <p>Hobi: Olahraga Angkat Beban</p>
+        <p>Keahlian: Bahasa (Inggris, Indonesia, Jepang)</p>
+        <p>"No pain, no gain — angkat beban dulu, mikirin error belakangan."</p>
+
+        <button onclick="surprise()">Surprise Me!</button>
+        <button onclick="ubahBackground()">Change Theme</button>
+    </div>
+
+    <!-- AKTIVITAS TERAKHIR -->
+    <div class="card">
+        <h2> Aktivitas Terakhir</h2>
+        <p><i>"Gym, Fitness — mengejar progressive overload."</i></p>
+        <p>Kesibukan sehari-hari: latihan rutin biar makin kuat sambil tetap produktif.</p>
+
+        <img src="woman-helping-man-gym-scaled.jpg" alt="Aktivitas Gym dan Fitness" class="activity-img">
+    </div>
+
+    <!-- SKILL -->
+    <div class="card">
+        <h2>My Skills</h2>
+
+        <div class="skill">
+            <p>Bahasa Indonesia - 100%</p>
+            <div class="bar">
+                <div class="progress" style="width:100%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Bahasa Inggris - 90%</p>
+            <div class="bar">
+                <div class="progress" style="width:90%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Bahasa Jepang - 70%</p>
+            <div class="bar">
+                <div class="progress" style="width:70%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Angkat Beban (Weightlifting) - 85%</p>
+            <div class="bar">
+                <div class="progress" style="width:85%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIRTUAL PET -->
+    <div class="card profile">
+        <h2>My Virtual Pet</h2>
+
+        <div class="pet" onclick="petClick()">🐱</div>
+
+        <p id="petMessage">Meow! Namaku Mochi. Klik aku!</p>
+        <p>Jumlah klik: <span id="counter">0</span></p>
+    </div>
+
+    <footer>
+        Made with love by Bryan Wilson Angelo | 2026
+    </footer>
+
+</div>
+
+<script src="bryan.js"></script>
 </body>
 </html>
