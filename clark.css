@@ -1,0 +1,65 @@
+
+/* Interactive Zone */
+
+.interactive-section {
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 20px;
+    text-align: center;
+}
+
+.interactive-section h2 {
+    color: #333;
+}
+
+.feature-card {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.feature-card button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feature-card button:hover {
+    background: #666;
+    transform: scale(1.05);
+}
+
+/* Skill Bar */
+
+.skill-bar {
+    background: #ddd;
+    height: 22px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.skill {
+    height: 100%;
+    color: white;
+    text-align: right;
+    padding-right: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.java {
+    width: 80%;
+    background: #e67e22;
+}
+
+.jawa {
+    width: 100%;
+    background: #27ae60;
+}

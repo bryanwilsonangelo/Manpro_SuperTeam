@@ -1,24 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Profil - Clark Kent Chu</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="clark.css">
 </head>
+
 <body>
 
     <h1>Clark Kent Chu</h1>
-    
+
     <img src="messi.webp" alt="Foto Keren clark" width="300">
-    
-    <p><strong>Hobi:</strong> Nonton Film</p>
-    <p><strong>Keahlian:</strong> Java dan Jawa</p>
+
+    <p><strong>Hobi:</strong> Sleep</p>
+    <p><strong>Keahlian:</strong> Java dan Cooking</p>
 
     <hr>
 
     <h2>Aktivitas Terakhir</h2>
     <p><em>"Memasak"</em></p>
-    
-    <img src="bryan-cranston-aaron-paul-breaking-bad.webp" alt="Aktivitas Terbalik" width="300">
-    
+
+    <img src="bryan-cranston-aaron-paul-breaking-bad.webp"
+         alt="Aktivitas Terbalik" width="300">
+
+    <hr>
+
+    <!-- INTERACTIVE ZONE -->
+    <section class="interactive-section">
+
+        <h2>✨ Interactive Zone</h2>
+
+        <!-- Surprise Button -->
+        <div class="feature-card">
+            <h3>🎁 Surprise Button</h3>
+
+            <p>Klik tombol untuk mendapatkan kejutan!</p>
+
+            <button onclick="showSurprise()">
+                Click Me!
+            </button>
+
+            <p id="surpriseText"></p>
+        </div>
+
+        <!-- Skill Chart -->
+        <div class="feature-card">
+            <h3>💻 My Skills</h3>
+
+            <p>Java</p>
+            <div class="skill-bar">
+                <div class="skill java">80%</div>
+            </div>
+
+            <p>Cooking</p>
+            <div class="skill jawa">100%</div>
+        </div>
+
+        <!-- Background -->
+        <div class="feature-card">
+            <h3>🎨 Change Background</h3>
+
+            <p>Ubah warna halaman profilmu!</p>
+
+            <button onclick="changeBackground()">
+                Change Theme
+            </button>
+        </div>
+
+    </section>
+
+    --!Menghubungkan JavaScript--
+    <script src="clark.js"></script>
+
 </body>
 </html>
