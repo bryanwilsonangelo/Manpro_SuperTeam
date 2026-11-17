@@ -1,5 +1,6 @@
-// SURPRISE BUTTON
-function surprise() {
+// TAMPILKAN RANDOM QUOTE DI DALAM KOTAK (TANPA POP-UP ALERT)
+function tampilkanQuote() {
+    var box = document.getElementById("quoteBox");
     var pesan = [
         "Waktunya minum whey protein dulu! 🥤",
         "Ganbatte! (頑張って) Jangan skip leg day! 🦵",
@@ -9,15 +10,16 @@ function surprise() {
     ];
 
     var random = Math.floor(Math.random() * pesan.length);
-    alert(pesan[random]);
+    box.innerText = pesan[random];
+    box.classList.remove("hidden");
 }
 
-// CHANGE BACKGROUND (DARK / LIGHT MODE)
+// GANTI TEMA (LIGHT / DARK MODE)
 function ubahBackground() {
     document.getElementById("halaman").classList.toggle("dark");
 }
 
-// VIRTUAL PET
+// GYM BUDDY / VIRTUAL PET INTERACTION
 var jumlahKlik = 0;
 
 function petClick() {
@@ -31,8 +33,8 @@ function petClick() {
         "Meow! Aku kucing trilingual: Meow, Nyaa, dan Miaw! 🗣️",
         "Jangan cuma diklik, beliin wet food dong! 🥫",
         "Purrr... kamu rajin banget, fix calon sultan! 👑",
-        "Otsukaresama desu~ Istirahat dulu sini sama aku! 😺",
-        "Klik lagi! Siapa tahu aku berubah jadi macan gym! 🐯"
+        "Istirahat dulu sini sama aku! 😺",
+        "Tambah terus repetisinya! Siapa tahu aku berubah jadi macan gym! 🐯"
     ];
 
     var random = Math.floor(Math.random() * pesan.length);

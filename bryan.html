@@ -12,67 +12,90 @@
 
     <!-- PROFIL -->
     <div class="card profile">
-        <img src="kucing.jpg" alt="Foto Bryan Wilson Angelo">
+        <div class="profile-header">
+            <img src="kucing.jpg" alt="Foto Bryan Wilson Angelo">
+            <div class="profile-info">
+                <h1>Bryan Wilson Angelo</h1>
+                <span class="badge">Hobi: Olahraga Angkat Beban</span>
+                <span class="badge">Keahlian: Bahasa (Inggris, Indonesia, Jepang)</span>
+                <p class="quote">"No pain, no gain — angkat beban dulu, mikirin error belakangan."</p>
+            </div>
+        </div>
 
-        <h1>Bryan Wilson Angelo</h1>
-        <p>Hobi: Olahraga Angkat Beban</p>
-        <p>Keahlian: Bahasa (Inggris, Indonesia, Jepang)</p>
-        <p>"No pain, no gain — angkat beban dulu, mikirin error belakangan."</p>
+        <div class="action-buttons">
+            <button onclick="tampilkanQuote()">⚡ Random Quote / Fact</button>
+            <button class="btn-outline" onclick="ubahBackground()">🌓 Ganti Tema</button>
+        </div>
 
-        <button onclick="surprise()">Surprise Me!</button>
-        <button onclick="ubahBackground()">Change Theme</button>
+        <!-- Kotak pesan interaktif (pengganti alert pop-up) -->
+        <div id="quoteBox" class="quote-box hidden"></div>
     </div>
 
-    <!-- AKTIVITAS TERAKHIR -->
-    <div class="card">
-        <h2> Aktivitas Terakhir</h2>
-        <p><i>"Gym, Fitness — mengejar progressive overload."</i></p>
-        <p>Kesibukan sehari-hari: latihan rutin biar makin kuat sambil tetap produktif.</p>
+    <!-- GRID 2 KOLOM: AKTIVITAS & SKILLS -->
+    <div class="grid-2">
+        <!-- AKTIVITAS TERAKHIR -->
+        <div class="card accent-card">
+            <h2>Aktivitas Terakhir</h2>
+            <p><i>"Gym, Fitness — mengejar progressive overload."</i></p>
+            <p>Kesibukan sehari-hari: latihan rutin biar makin kuat sambil tetap produktif.</p>
 
-        <img src="woman-helping-man-gym-scaled.jpg" alt="Aktivitas Gym dan Fitness" class="activity-img">
+            <img src="woman-helping-man-gym-scaled.jpg" alt="Aktivitas Gym dan Fitness" class="activity-img">
+        </div>
+
+        <!-- SKILL -->
+        <div class="card accent-card">
+            <h2>My Skills</h2>
+
+            <div class="skill">
+                <div class="skill-label">
+                    <span>Bahasa Indonesia</span>
+                    <span>100%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" style="width:100%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-label">
+                    <span>Bahasa Inggris</span>
+                    <span>90%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" style="width:90%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-label">
+                    <span>Bahasa Jepang</span>
+                    <span>20%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" style="width:20%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-label">
+                    <span>Angkat Beban (Weightlifting)</span>
+                    <span>85%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" style="width:85%"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- SKILL -->
-    <div class="card">
-        <h2>My Skills</h2>
-
-        <div class="skill">
-            <p>Bahasa Indonesia - 100%</p>
-            <div class="bar">
-                <div class="progress" style="width:100%"></div>
-            </div>
+    <!-- VIRTUAL PET / GYM BUDDY -->
+    <div class="card buddy-card">
+        <div class="pet" id="petIcon" onclick="petClick()">🐱</div>
+        <div class="buddy-info">
+            <h2>Gym Buddy: Mochi</h2>
+            <p id="petMessage">Meow! Klik aku untuk mulai latihan bareng!</p>
+            <p class="rep-counter">Total Repetisi / Klik: <span id="counter">0</span> reps</p>
         </div>
-
-        <div class="skill">
-            <p>Bahasa Inggris - 90%</p>
-            <div class="bar">
-                <div class="progress" style="width:90%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <p>Bahasa Jepang - 70%</p>
-            <div class="bar">
-                <div class="progress" style="width:70%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <p>Angkat Beban (Weightlifting) - 85%</p>
-            <div class="bar">
-                <div class="progress" style="width:85%"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- VIRTUAL PET -->
-    <div class="card profile">
-        <h2>My Virtual Pet</h2>
-
-        <div class="pet" onclick="petClick()">🐱</div>
-
-        <p id="petMessage">Meow! Namaku Mochi. Klik aku!</p>
-        <p>Jumlah klik: <span id="counter">0</span></p>
     </div>
 
     <footer>
